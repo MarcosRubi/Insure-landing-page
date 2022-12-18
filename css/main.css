@@ -175,7 +175,7 @@ header .logo:hover{
     background-repeat: no-repeat, no-repeat;
     background-position: left 32vh, right 125vh;
     background-size: initial;
-    margin-top: 64px;
+    padding-top: 64px;
 }
 .banner__img img {
     width: 100%;
