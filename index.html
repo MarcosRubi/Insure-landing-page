@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Insure landing page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container d-flex align-center jc-between">
+            <a href="#" class="logo">
+                <img src="images/logo.svg" alt="Logo Insure">
+            </a>
+            <nav class="menu text-uppercase d-flex-md align-center jc-end">
+                <ul class="d-flex-md">
+                    <li>
+                        <a href="#" class="d-block-sm text-center-sm" onclick="javascript:toggleMenu();">How We Work</a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-block-sm text-center-sm" onclick="javascript:toggleMenu();">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-block-sm text-center-sm" onclick="javascript:toggleMenu();">Account</a>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-secondary d-block-sm" onclick="javascript:toggleMenu();">View Plans</a>
+            </nav>
+            <button class="btn btn-menu" onclick="javascript:toggleMenu();"></button>
+        </div>
+    </header>
+    <main>
+        <section class="banner ">
+            <div class="container-md d-flex-md align-center">
+                <div class="banner__img d-flex-sm jc-center">
+                    <picture>
+                        <source media="(min-width: 768px)" srcset="images/image-intro-desktop.jpg">
+                        <img src="images/image-intro-mobile.jpg" alt="Banner Image" class="d-flex">
+                    </picture>
+                </div>
+                <div class="banner__content text-center-sm">
+                    <div class="container-sm">
+                        <h1>Humanizing your insurance.</h1>
+                        <p>Get your life insurance coverage easier and faster. We blend our expertise and technology to
+                            help you find the plan that’s right for you. Ensure you and your loved one are protected.
+                        </p>
+                        <a href="#" class="btn btn-secondary text-uppercase d-inline-block">View Plans</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="advantages container text-center-sm">
+            <h2>We're different</h2>
+            <div class="d-flex flex-wrap jc-center">
+                <div class="advantage">
+                    <img src="images/icon-snappy-process.svg" alt="Icon" aria-hidden="true">
+                    <h3>Snappy Proccess</h3>
+                    <p>Our application process can be completed in minutes, not hours. Don’t get stuck filling in
+                        tedious forms. </p>
+                </div>
+                <div class="advantage">
+                    <img src="images/icon-affordable-prices.svg" alt="Icon" aria-hidden="true">
+                    <h3>Affordable Prices</h3>
+                    <p>We don’t want you worrying about high monthly costs. Our prices may be low, but we still offer
+                        the best coverage possible. </p>
+                </div>
+                <div class="advantage">
+                    <img src="images/icon-people-first.svg" alt="Icon" aria-hidden="true">
+                    <h3>People First</h3>
+                    <p>Our plans aren’t full of conditions and clauses to prevent payouts. We make sure you’re covered
+                        when you need it. </p>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="work container">
+            <div class="d-flex-md align-center text-center-sm jc-between align-center">
+                <h2>Find out more about how we work</h2>
+                <a href="#" class="btn btn-secondary d-inline-block text-uppercase">How We Work</a>
+            </div>
+        </section>
+    </main>
+    <footer class="container">
+        <div class="d-flex flex-column-sm align-center jc-center-sm jc-between">
+            <div class="logo">
+                <img src="images/logo.svg" alt="Logo Insure">
+            </div>
+            <ul class="social d-flex align-center jc-center">
+                <li><a href="#"><img src="images/icon-facebook.svg" alt="Icon Facebook" aria-hidden="true"></a></li>
+                <li><a href="#"><img src="images/icon-twitter.svg" alt="Icon Twitter" aria-hidden="true"></a></li>
+                <li><a href="#"><img src="images/icon-pinterest.svg" alt="Icon Pinterest" aria-hidden="true"></a></li>
+                <li><a href="#"><img src="images/icon-instagram.svg" alt="Icon Instagram" aria-hidden="true"></a></li>
+            </ul>
+        </div>
+        <hr>
+        <div class="d-grid text-center-sm text-uppercase">
+            <div class="our-company">
+                <h4>Our Company</h4>
+                <ul>
+                    <li><a href="#" class="d-inline-block">How We Work</a></li>
+                    <li><a href="#" class="d-inline-block">Why Insure?</a></li>
+                    <li><a href="#" class="d-inline-block">Check Price</a></li>
+                    <li><a href="#" class="d-inline-block">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="help-me">
+                <h4>Help Me</h4>
+                <ul>
+                    <li><a href="#" class="d-inline-block">FAQ</a></li>
+                    <li><a href="#" class="d-inline-block">Terms Of Use</a></li>
+                    <li><a href="#" class="d-inline-block">Privacy Policy</a></li>
+                    <li><a href="#" class="d-inline-block">Cookies</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                    <h4>Contact</h4>
+                <ul>
+                    <li><a href="#" class="d-inline-block">Sales</a></li>
+                    <li><a href="#" class="d-inline-block">Support</a></li>
+                    <li><a href="#" class="d-inline-block">Live Chat</a></li>
+                </ul>
+            </div>
+            <div class="others">
+                <h4>Others</h4>
+                <ul>
+                    <li><a href="#" class="d-inline-block">Careers</a></li>
+                    <li><a href="#" class="d-inline-block">Press</a></li>
+                    <li><a href="#" class="d-inline-block">Licences</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="attribution">
+            <p>Challenge by
+                <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+                <a href="https://mrubi.vercel.app/" target="_blank">Marcos Rubí</a>.
+            </p>
+        </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

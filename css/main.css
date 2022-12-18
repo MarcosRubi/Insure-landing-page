@@ -1,0 +1,515 @@
+:root {
+    --Dark-Violet: hsl(256, 26%, 20%);
+    --Grayish-Blue: hsl(216, 30%, 68%);
+    --Very-Dark-Violet: hsl(270, 9%, 17%);
+    --Dark-Grayish-Violet: hsl(273, 4%, 51%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: "Karla", sans-serif;
+}
+
+h1,
+h2,
+h3,
+.btn {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+}
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+a {
+    text-decoration: none;
+    transition: all 300ms;
+}
+li {
+    list-style: none;
+}
+
+.container,
+.container-sm {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.btn {
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.btn-secondary {
+    border: 2px solid var(--Very-Light-Gray);
+    color: var(--Very-Light-Gray);
+}
+.btn-menu {
+    background-image: url(../images/icon-hamburger.svg);
+    padding: 1rem;
+    transition: background-image 300ms;
+}
+.text-uppercase {
+    text-transform: uppercase;
+}
+.d-flex {
+    display: flex;
+}
+.d-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(18rem,1fr));
+}
+.align-center {
+    align-items: center;
+}
+.jc-between {
+    justify-content: space-between;
+}
+.jc-center {
+    justify-content: center;
+}
+.jc-end {
+    justify-content: flex-end;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.d-inline-block {
+    display: inline-block;
+}
+.d-flex-sm {
+    display: flex;
+}
+.d-block-sm {
+    display: block;
+}
+.text-center-sm {
+    text-align: center;
+}
+.jc-center-sm {
+    justify-content: center;
+}
+.flex-column-sm {
+    flex-direction: column;
+}
+
+header {
+    padding: 1.25rem 0;
+    position: fixed;
+    width: 100%;
+    top:0;
+    transition: padding 300ms;
+    background-color: var(--Very-Light-Gray);
+    z-index: 99;
+}
+.menu {
+    position: fixed;
+    background-color: var(--Very-Dark-Violet);
+    top: 64px;
+    height: calc(100vh - 64px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1.5rem 1rem;
+    background-image: url(../images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    z-index: 99;
+
+    width: 80%;
+    opacity: 0;
+    pointer-events: none;
+    transition: width 0.5s, opacity 0.75s;
+}
+.menu a {
+    font-weight: 700;
+    color: var(--Very-Light-Gray);
+    padding: 1.15rem 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+.menu a:hover{
+    color: var(--Grayish-Blue);
+}
+.menu .btn-secondary {
+    max-width: 20rem;
+    margin: 0 auto;
+}
+.menu .btn-secondary:hover{
+    background-color: var(--Dark-Violet);
+    color: var(--Very-Light-Gray);
+}
+.menu.active ~ .btn-menu {
+    background-image: url(../images/icon-close.svg);
+}
+.menu.active {
+    width: 101vw;
+    opacity: 1;
+    pointer-events: initial;
+}
+header.sticky{
+    padding: 1rem 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+header .logo:hover{
+    transform: scale(1.05);
+}
+
+.banner {
+    color: var(--Very-Light-Gray);
+    background: var(--Dark-Violet);
+    background-image: url(../images/bg-pattern-intro-left-desktop.svg),
+        url(../images/bg-pattern-intro-right-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left 32vh, right 125vh;
+    background-size: initial;
+    margin-top: 64px;
+}
+.banner__img img {
+    width: 100%;
+}
+.banner__content {
+    padding: 5rem 0;
+}
+.banner__content h1 {
+    line-height: 1;
+}
+.banner__content p {
+    margin: 1rem 0.75rem;
+}
+.banner__content .btn {
+    padding: 0.75rem 3rem;
+}
+.banner .btn:hover,
+.work .btn:hover{
+    background-color: var(--Very-Light-Gray);
+    color: var(--Very-Dark-Violet);
+}
+
+.advantages {
+    padding: 5rem 0;
+}
+.advantage {
+    padding: 3rem 2rem 3rem 0;
+    max-width: 20rem;
+}
+.advantage img {
+    max-width: 6rem;
+}
+.advantage p {
+    color: var(--Dark-Grayish-Violet);
+}
+.advantage h3 {
+    margin: 1rem 0;
+}
+
+.work {
+    background-color: var(--Dark-Violet);
+    color: var(--Very-Light-Gray);
+    padding: 2rem 1rem;
+
+    background-image: url(../images/bg-pattern-how-we-work-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+.work .btn {
+    margin-top: 2rem;
+    padding: 0.75rem 2.5rem;
+}
+
+footer{
+    padding-top: 3rem;
+}
+.social a{
+    padding: 1rem .5rem;
+}
+.social a:hover{
+    filter: brightness(0.5);
+}
+footer .logo{
+    margin-bottom: 1rem;
+}
+hr{
+    border: none;
+    box-shadow: 0px 1px 3px 1px var(--Grayish-Blue);
+    margin: 2rem 0;
+}
+h4{
+    color: var(--Grayish-Blue);
+}
+footer .d-grid ul{
+    margin: 2rem 0;
+}
+footer a{
+    color: var(--Very-Dark-Violet);
+    font-weight: 700;
+    padding: .25rem 0;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+.attribution{
+    color: var(--Very-Dark-Violet);
+    text-align: center;
+}
+
+
+.banner__content h1,
+.banner__content p,
+.banner__content .btn,
+.banner__img,
+.advantages h2,
+.advantage,
+.work h2,
+.work .btn,
+footer .logo,
+footer .social,
+hr,
+.our-company,
+.help-me,
+.contact,
+.others,
+.attribution{
+    opacity: 0;
+}
+header.visible{
+    top: 0;
+    animation: toBottom .5s linear;
+}
+.banner__content h1.visible{
+    opacity: 1;
+    animation: visible .5s linear;
+}
+.banner__content p.visible{
+    opacity: 1;
+    animation: visible .75s linear;
+}
+.banner__content .btn.visible{
+    opacity: 1;
+    animation: visible 1s linear;
+}
+.banner__img.visible{
+    opacity: 1;
+    animation: visible 1.25s linear;
+}
+.advantages h2{
+    opacity: 1;
+    animation: visible .5s linear;
+}
+.advantage.visible:first-child{
+    opacity: 1;
+    animation: visible .75s linear;
+}
+.advantage.visible:nth-child(2){
+    opacity: 1;
+    animation: visible 1s linear;
+}
+.advantage.visible:last-child{
+    opacity: 1;
+    animation: visible 1.25s linear;
+}
+.work h2.visible{
+    opacity: 1;
+    animation: visible .5s linear;
+}
+.work .btn.visible{
+    opacity: 1;
+    animation: visible .75s linear;
+}
+
+footer .logo.visible{
+    opacity: 1;
+    animation: visible .5s linear;
+}
+footer .social.visible{
+    opacity: 1;
+    animation: visible .75s linear;
+}
+footer hr.visible{
+    opacity: 1;
+    animation: visible 1s linear;
+}
+footer .our-company.visible{
+    opacity: 1;
+    animation: visible .5s linear;
+}
+footer .help-me.visible{
+    opacity: 1;
+    animation: visible .75s linear;
+}
+footer .contact.visible{
+    opacity: 1;
+    animation: visible 1s linear;
+}
+footer .others.visible{
+    opacity: 1;
+    animation: visible 1.25s linear;
+}
+footer .attribution.visible{
+    opacity: 1;
+    animation: visible 1s linear;
+}
+
+@keyframes toBottom {
+    0%{
+        top: -5rem;
+    }
+    100%{
+        top: 0;
+    }
+}
+@keyframes visible {
+    0%, 40%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .container-md {
+        width: 90%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    .container-sm {
+        width: initial;
+        margin: 0;
+    }
+    .d-block-sm {
+        display: initial;
+    }
+    .text-center-sm {
+        text-align: initial;
+    }
+    .d-flex-sm {
+        display: initial;
+    }
+    .d-flex-md {
+        display: flex;
+    }
+    .flex-column-sm{
+        flex-direction: row;
+    }
+
+    .menu {
+        position: relative;
+        background-color: transparent;
+        top: 0px;
+        height: initial;
+        left: 0%;
+        transform: translateX(0);
+        padding: 0;
+        background-image: none;
+
+        width: 100%;
+        opacity: 1;
+        pointer-events: initial;
+        transition: width 0.5s, opacity 0.75s;
+    }
+    .menu a {
+        font-weight: 400;
+        color: var(--Dark-Grayish-Violet);
+        padding: 1.15rem 1rem;
+        font-size: 1rem;
+    }
+    .menu a:hover{
+        color: var(--Very-Dark-Violet);
+    }
+    .menu .btn-secondary:hover{
+        background-color: var(--Very-Dark-Violet);
+        color: var(--Very-Light-Gray);
+    }
+    .btn-menu {
+        display: none;
+    }
+    .menu .btn-secondary {
+        margin: 0;
+        border: 1px solid var(--Dark-Violet);
+        color: var(--Dark-Violet);
+        padding: 0.5rem 1.5rem;
+    }
+
+    .banner {
+        background-image: url(../images/bg-pattern-intro-left-desktop.svg),
+            url(../images/bg-pattern-intro-right-desktop.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: left 50vh, right 0vh;
+        background-size: initial;
+    }
+    .banner__content {
+        order: -1;
+        flex-basis: 70%;
+    }
+    .banner__img {
+        flex-basis: 50%;
+    }
+    .banner__img img {
+        transform: translateY(3rem);
+    }
+    .banner__content p {
+        margin: 1rem 0;
+    }
+
+    .work {
+        background-image: url(../images/bg-pattern-how-we-work-desktop.svg);
+        padding: 2rem;
+    }
+    .work .btn {
+        margin: 0;
+    }
+    .work h2 {
+        max-width: 25rem;
+    }
+
+    footer .d-flex{
+        justify-content: space-between;
+    }
+    footer .logo{
+        margin: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    .banner__content {
+        padding-right: 3rem;
+    }
+    .banner__content p {
+        max-width: 33rem;
+        line-height: 1.5;
+    }
+    .advantages .d-flex {
+        justify-content: space-between;
+    }
+    .advantage {
+        flex-basis: 33%;
+    }
+    .work h2 {
+        max-width: 31rem;
+    }
+}
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 6rem;
+    }
+}
